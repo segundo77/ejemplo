@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0;/**/
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;/**/
+}
+
+body{
+    background: url("https://scontent.fgye1-1.fna.fbcdn.net/v/t39.30808-6/474000413_3853304531602131_8530470410862067211_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=86c6b0&_nc_ohc=32FWxC0TfC0Q7kNvgGLTOfg&_nc_oc=Adi2IJE5Qi6cHRtKCR_jDXyRDlMvD--LNdj4CZFn_3XIVM4NKu-mqQF2jeoIU1DPIZRSkNJmO7fO8-MW0IVNQUXB&_nc_zt=23&_nc_ht=scontent.fgye1-1.fna&_nc_gid=AJxVJzSYV9XfZwlV8yyqtgC&oh=00_AYFAQmyth8BVXvWFxp16aKcj7FPrBT8K3rMtYhTuQSa-ZQ&oe=67D967FD");
+    background-position: center;/**/
+    background-size: cover;/**/
+    background-attachment: fixed;/**/
+    background-repeat: no-repeat;
+}
+
+.container{
+    display: flex;
+    justify-content: center;/**/
+    align-items: center;
+    height: 100vh;
+    /*background-color: aqua;/**/
+}
+
+#contenedorLogin{
+    background-color: rgba(213, 240, 248, 0.7);
+    padding: 60px 38px;
+    border-radius: 30px;
+    width: 24em;
+    height: 28em;
+}
+
+.login h2{
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 576px) { /* Para pantallas pequeñas (móviles) */
+    .login h2 {
+      font-size: 30px; /* Tamaño más pequeño en celulares */
+    }
+  }
+
+.contenedorEntrada{
+    margin: 16px 0;
+    /*background-color: aquamarine;/**/
+    position: relative;
+}
+
+.contenedorEntrada input{
+    padding: 7px 20px;
+    width: 100%;
+    outline: none;
+
+}
+
+.login h2, p{
+    text-align: center;
+}
+
+.usuarioForm, .contrasenaForm{
+    width: 250px;
+    border-radius: 30px;
+    padding: 5px;
+    border: none;
+}
+
+.btnLogin{
+    background-color: #2790ec;
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
+
+.boton{
+    margin: 20px 0px;
+}
+
+.btnLogin{
+    padding: 5px;
+}
+
+.registrarseLink{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 576px) { 
+    .registrarseLink {
+        display: block; /* Se apilan los elementos en móviles */
+        text-align: center; /* Centrar contenido opcionalmente */
+
+    }
+}
+
+.registrarseLink p{
+    text-decoration: none;
+}
+
+
+
+.registrarseLink a:hover{
+    color: rgb(63, 67, 156);
+    text-decoration: underline;
+}
+
+.contenedorEntrada i{
+    position: absolute;
+    right: 28px;
+    top: 27%
+}
+
+.recordarContrasena{
+    margin-left: 14px;
+}
