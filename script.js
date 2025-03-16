@@ -27,13 +27,20 @@ function iniciarSesion(event) {
     // Verifica si el usuario existe y si la contraseña es correcta
     // Verifica si el usuario existe y si la contraseña es correcta
     if (usuarios[usuario] && atob(usuarios[usuario]) === contraseña) {
-        // Detecta si el usuario está en un dispositivo móvil
-        if (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone|webOS/i.test(navigator.userAgent)) {
-            // Redirige a la app de Google Sheets si está en un móvil
-            window.location.href = "googlesheets://docs.google.com/spreadsheets/d/10mmqGMD_Zu02oQdqLbDvYMAczD9WZUM0ZOXMqRJ4iyI";
+        var sheetId = "10mmqGMD_Zu02oQdqLbDvYMAczD9WZUM0ZOXMqRJ4iyI"; // ID de tu Google Sheet
+        var sheetGid = "0"; // ID de la hoja específica
+
+        // URL para abrir en navegador
+        var urlNavegador = `https://docs.google.com/spreadsheets/d/${sheetId}/edit#gid=${sheetGid}`;
+
+        // URL especial para móviles (forzará la app de Google Sheets)
+        var urlMovil = `https://docs.google.com/open?id=${sheetId}`;
+
+        // Detectar si el usuario está en un dispositivo móvil
+        if (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone|webOS|Huawei/i.test(navigator.userAgent)) {
+            window.location.href = urlMovil;
         } else {
-            // Redirige al navegador en caso de que no esté en móvil
-            window.location.href = "https://docs.google.com/spreadsheets/d/10mmqGMD_Zu02oQdqLbDvYMAczD9WZUM0ZOXMqRJ4iyI";
+            window.location.href = urlNavegador;
         }
     } else {
         alert("Usuario o contraseña incorrectos");
